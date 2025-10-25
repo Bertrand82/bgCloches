@@ -11,18 +11,20 @@ public class CalculVolume {
 	double hauteurTotal=0.;
 	double volumeTotal=0.;
 	double poidTotal=0.;
+	double rayonMax=0.;
 	static final double densiteBronze_g_cm3 =8.7; // g/cm3
 	
 	public	CalculVolume(List<ProfilCloche> profils) {
 		this.profils =profils;
 		System.out.println("CalculVolume instance created.");
 		hauteurTotal=profils.get(profils.size()-1).z;
+		rayonMax=profils.get(profils.size()-1).r1;
 		normalizeProfils();
-		profilsNormalized.forEach( p -> 
-			System.out.println(p.toString())
-		);
+		
 		volumeTotal =calculateVolume();
 		poidTotal = volumeTotal * densiteBronze_g_cm3 ; // g
+		System.out.println("---- Résultats ----");
+		System.out.println("Rayon max: " + String.format("%8.3f", rayonMax) + " cm");
 		System.out.println("Hauteur totale: " + String.format("%8.3f", hauteurTotal) + " cm");
 		System.out.println("Volume total: " + String.format("%8.3f", volumeTotal) + " cm3");
 		System.out.println("Poid total: " + String.format("%8.3f", poidTotal) + " g");

@@ -22,5 +22,26 @@ public class FactoryProfils {
 				);	
 		return profils;
 	}
+	
+	public static List<ProfilCloche> getProfils_R12() {
+		List<ProfilCloche> profils = List.of(
+				new ProfilCloche(0., 2.5, 5.),
+				new ProfilCloche(1., 6., 2.),
+				new ProfilCloche(2., 7.,1.5 ),
+				new ProfilCloche(3., 7.5, 1.25),
+				new ProfilCloche(4., 8., 1.2),
+				new ProfilCloche(5., 8., 1.),
+				new ProfilCloche(10.,8. , 1.),
+				new ProfilCloche(15.,9. , 1.3),
+				new ProfilCloche(20.,11. , 2.),
+				new ProfilCloche(21.,11.5 ,1.5 ),
+				new ProfilCloche(22.,12. , 1.5),
+				new ProfilCloche(23., 12., 1.),
+				new ProfilCloche(24., 12., 1.)
+				
+				
+				);	
+		return profils;
+	}
 
 }
